@@ -1,12 +1,9 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       <Navigation />
       
       {/* Hero Section */}
@@ -19,20 +16,14 @@ const Index = () => {
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold mb-6 animate-fade-in">
-            <span className="text-gradient">Style.</span>{" "}
-            <span className="text-white">Precision.</span>{" "}
-            <span className="text-gradient">Power.</span>
+            {" "}
+            <span className="text-white mx-0 px-0 text-7xl">Precise cut,</span>{" "}
+            <span className="text-gradient font-extrabold text-7xl">Modern style</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto animate-fade-in">
-            Where modern style meets surgical precision
-          </p>
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto animate-fade-in">Where modern style meets precision</p>
           
-          <Button 
-            asChild
-            size="lg"
-            className="bg-gold hover:bg-gold-dark text-black font-semibold px-12 py-4 text-lg hover-lift animate-fade-in golden-glow"
-          >
+          <Button asChild size="lg" className="bg-gold hover:bg-gold-dark text-black font-semibold px-12 py-4 text-lg hover-lift animate-fade-in golden-glow">
             <Link to="/booking">Book Your Cut</Link>
           </Button>
         </div>
@@ -65,33 +56,32 @@ const Index = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { title: "Precision Cuts", description: "Architectural styling with razor-sharp precision" },
-              { title: "Beard Sculpting", description: "Master-crafted beard design and maintenance" },
-              { title: "Perfect Fades", description: "Seamless transitions that define excellence" },
-              { title: "Hot Towel Shaves", description: "Traditional luxury meets modern technique" }
-            ].map((service, index) => (
-              <div 
-                key={service.title}
-                className="bg-black p-8 hover-lift group cursor-pointer border border-gray-800 hover:border-gold/50 transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {[{
+            title: "Precision Cuts",
+            description: "Architectural styling with razor-sharp precision"
+          }, {
+            title: "Beard Sculpting",
+            description: "Master-crafted beard design and maintenance"
+          }, {
+            title: "Perfect Fades",
+            description: "Seamless transitions that define excellence"
+          }, {
+            title: "Hot Towel Shaves",
+            description: "Traditional luxury meets modern technique"
+          }].map((service, index) => <div key={service.title} className="bg-black p-8 hover-lift group cursor-pointer border border-gray-800 hover:border-gold/50 transition-all duration-300" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <h3 className="text-xl font-playfair font-bold text-gold mb-4 group-hover:text-gold-light transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-300 group-hover:text-white transition-colors">
                   {service.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
           
           <div className="text-center mt-12">
-            <Button 
-              asChild
-              variant="outline"
-              className="border-gold text-gold hover:bg-gold hover:text-black font-semibold px-8 py-3"
-            >
+            <Button asChild variant="outline" className="border-gold text-gold hover:bg-gold hover:text-black font-semibold px-8 py-3">
               <Link to="/services">View All Services</Link>
             </Button>
           </div>
@@ -99,8 +89,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
