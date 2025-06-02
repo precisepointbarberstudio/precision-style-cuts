@@ -1,9 +1,12 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+
 const Index = () => {
-  return <div className="min-h-screen bg-black text-white">
+  return (
+    <div className="min-h-screen bg-black text-white">
       <Navigation />
       
       {/* Hero Section */}
@@ -48,39 +51,63 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Quick Services Preview */}
+      {/* Signature Services */}
       <section className="py-32 bg-jet-light">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-center text-gold mb-16">
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-center text-gold mb-20">
             Our Signature Services
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[{
-            title: "Precision Cuts",
-            description: "Architectural styling with razor-sharp precision"
-          }, {
-            title: "Beard Sculpting",
-            description: "Master-crafted beard design and maintenance"
-          }, {
-            title: "Perfect Fades",
-            description: "Seamless transitions that define excellence"
-          }, {
-            title: "Hot Towel Shaves",
-            description: "Traditional luxury meets modern technique"
-          }].map((service, index) => <div key={service.title} className="bg-black p-8 hover-lift group cursor-pointer border border-gray-800 hover:border-gold/50 transition-all duration-300" style={{
-            animationDelay: `${index * 0.1}s`
-          }}>
-                <h3 className="text-xl font-playfair font-bold text-gold mb-4 group-hover:text-gold-light transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-300 group-hover:text-white transition-colors">
-                  {service.description}
-                </p>
-              </div>)}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {[
+              { 
+                title: "Precision Cuts", 
+                description: "Architectural styling with razor-sharp precision that defines your unique character",
+                image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&h=300&fit=crop&q=80"
+              },
+              { 
+                title: "Master Fades", 
+                description: "Seamless transitions crafted with surgical precision for the modern gentleman",
+                image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=400&h=300&fit=crop&q=80"
+              },
+              { 
+                title: "Beard Sculpting", 
+                description: "Transform your facial hair into a work of art with our master-level expertise",
+                image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&h=300&fit=crop&q=80"
+              }
+            ].map((service, index) => (
+              <div 
+                key={service.title}
+                className="group relative overflow-hidden bg-black border border-gray-800 hover:border-gold/50 transition-all duration-500 hover-lift"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                {/* Service Image */}
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                </div>
+                
+                {/* Service Content */}
+                <div className="p-8">
+                  <h3 className="text-2xl font-playfair font-bold text-gold mb-4 group-hover:text-gold-light transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 group-hover:text-white transition-colors leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+
+                {/* Hover Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              </div>
+            ))}
           </div>
           
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Button asChild variant="outline" className="border-gold text-gold hover:bg-gold hover:text-black font-semibold px-8 py-3">
               <Link to="/services">View All Services</Link>
             </Button>
@@ -89,6 +116,8 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
