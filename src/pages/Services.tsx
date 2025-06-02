@@ -1,13 +1,10 @@
 
-import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const Services = () => {
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
-
   const services = [
     {
       id: "precision-cuts",
@@ -62,9 +59,7 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={service.id}
-                className="relative bg-jet-light p-12 hover-lift cursor-pointer border border-gray-800 hover:border-gold/50 transition-all duration-500 group"
-                onMouseEnter={() => setHoveredService(service.id)}
-                onMouseLeave={() => setHoveredService(null)}
+                className="relative bg-jet-light p-12 hover-lift border border-gray-800 hover:border-gold/50 transition-all duration-500 group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Service Header */}
@@ -77,32 +72,28 @@ const Services = () => {
                   </p>
                 </div>
 
-                {/* Price Reveal */}
-                <div className={`transition-all duration-500 ${
-                  hoveredService === service.id ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
-                }`}>
-                  <div className="border-t border-gold/30 pt-6 mb-6">
-                    <div className="flex justify-between items-center mb-6">
-                      <span className="text-2xl font-playfair font-bold text-gold">
-                        {service.price}
-                      </span>
-                      <span className="text-gray-400">Starting from</span>
-                    </div>
-                    
-                    {/* Features */}
-                    <ul className="space-y-3">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="text-gray-300 flex items-center">
-                          <div className="w-2 h-2 bg-gold rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                {/* Price and Features - Always Visible */}
+                <div className="border-t border-gold/30 pt-6">
+                  <div className="flex justify-between items-center mb-6">
+                    <span className="text-2xl font-playfair font-bold text-gold">
+                      {service.price}
+                    </span>
+                    <span className="text-gray-400">Starting from</span>
                   </div>
+                  
+                  {/* Features */}
+                  <ul className="space-y-3">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="text-gray-300 flex items-center group-hover:text-white transition-colors">
+                        <div className="w-2 h-2 bg-gold rounded-full mr-3"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* Hover Glow Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`}></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               </div>
             ))}
           </div>
