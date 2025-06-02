@@ -24,8 +24,9 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-playfair font-bold text-gold">
-              Precise Point
+            <span className="text-2xl font-playfair font-bold">
+              <span className="text-gold">Precise Point</span>
+              <span className="text-white"> Barber Studio</span>
             </span>
           </Link>
 
