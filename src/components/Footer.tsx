@@ -1,6 +1,5 @@
 
-import { Link } from "react-router-dom";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -20,25 +19,13 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex justify-center md:justify-start space-x-4">
               <a 
-                href="#" 
-                className="text-gray-300 hover:text-gold transition-colors duration-200"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a 
-                href="#" 
+                href="https://www.instagram.com/precisepointbarbering?igsh=MXdnY3duNTlvN3Z1NQ==" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-300 hover:text-gold transition-colors duration-200"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-300 hover:text-gold transition-colors duration-200"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
               </a>
             </div>
           </div>
@@ -66,10 +53,9 @@ const Footer = () => {
           <div className="text-center md:text-right">
             <h4 className="text-lg font-semibold text-gold mb-4">Contact</h4>
             <div className="space-y-2 text-gray-300">
-              <p>123 Style Street</p>
-              <p>Downtown, NY 10001</p>
-              <p>(555) 123-4567</p>
-              <p>info@precisepoint.com</p>
+              <p>303-177 Main St</p>
+              <p>Dartmouth, NS, B2X 1S1</p>
+              <p>(902) 830-1373</p>
             </div>
           </div>
         </div>
@@ -82,7 +68,7 @@ const Footer = () => {
             size="lg"
             className="bg-gold hover:bg-gold-dark text-black font-semibold px-8 py-3 text-lg hover-lift"
           >
-            <Link to="/booking">Book Your Cut</Link>
+            <a href="https://getsquire.com/discover/barbershop/precise-point-barber-studio-dartmouth?hl=en-CA&gei=0CI9aJzcGfqe5NoPopiVqAg&gsas=1&ahbb=1&rwg_token=ACgRB3e9WsBMuE6yvBY3ALSq5KHnJ9ICr0NDBeYAM0uCAezR_Z2F-jZh1f77md8Bh2JB5OnK1uGhYV710fbKBmz1GD7MueULBQ%3D%3D" target="_blank" rel="noopener noreferrer">Book Your Cut</a>
           </Button>
         </div>
 
