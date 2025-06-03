@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -26,13 +27,13 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/4df19e55-f560-4ac7-a5f3-833e2da81afd.png" 
               alt="Precise Point Barber Studio" 
-              className="h-16 w-auto object-contain" 
+              className="h-20 w-auto object-contain" 
             />
           </Link>
 
@@ -71,7 +72,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 bg-black/95 backdrop-blur-sm border-t border-gold/20">
+          <div className="md:hidden absolute top-24 left-0 right-0 bg-black/95 backdrop-blur-sm border-t border-gold/20">
             <div className="px-4 py-6 space-y-4">
               {navItems.map(item => (
                 <Link
