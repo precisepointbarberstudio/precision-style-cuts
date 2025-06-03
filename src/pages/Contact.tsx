@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { Facebook, TikTok } from "lucide-react";
+import { Facebook } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -53,7 +53,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-                    <p className="text-gray-300">(902) 830-1373</p>
+                    <p className="text-gray-300">
+                      <a href="tel:+19028301373" className="hover:text-gold transition-colors">
+                        (902) 830-1373
+                      </a>
+                    </p>
                   </div>
                 </div>
 
@@ -63,7 +67,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                    <p className="text-gray-300">precisepointbarbering@gmail.com</p>
+                    <p className="text-gray-300">
+                      <a href="mailto:precisepointbarbering@gmail.com" className="hover:text-gold transition-colors">
+                        precisepointbarbering@gmail.com
+                      </a>
+                    </p>
                   </div>
                 </div>
 
@@ -114,9 +122,21 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Follow Us</h3>
                     <div className="space-y-2 text-gray-300">
-                      <p>Instagram: @precisepointbarbering</p>
-                      <p>Facebook: Precise Point Barber Studio</p>
-                      <p>TikTok: @precisepointbarberstudio</p>
+                      <p>
+                        <a href="https://www.instagram.com/precisepointbarbering?igsh=MXdnY3duNTlvN3Z1NQ==" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                          Instagram: @precisepointbarbering
+                        </a>
+                      </p>
+                      <p>
+                        <a href="https://www.facebook.com/share/161iGDqAX7/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                          Facebook: Precise Point Barber Studio
+                        </a>
+                      </p>
+                      <p>
+                        <a href="https://www.tiktok.com/@precisepointbarberstudio?_t=ZM-8wsHTS4yJCn&_r=1" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                          TikTok: @precisepointbarberstudio
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
