@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -37,6 +36,8 @@ const Services = () => {
     }
   ];
 
+  const bookingUrl = "https://getsquire.com/discover/barbershop/precise-point-barber-studio-dartmouth?hl=en-CA&gei=0CI9aJzcGfqe5NoPopiVqAg&gsas=1&ahbb=1&rwg_token=ACgRB3e9WsBMuE6yvBY3ALSq5KHnJ9ICr0NDBeYAM0uCAezR_Z2F-jZh1f77md8Bh2JB5OnK1uGhYV710fbKBmz1GD7MueULBQ%3D%3D";
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
@@ -58,27 +59,34 @@ const Services = () => {
         <div className="max-w-4xl mx-auto px-4">
           <div className="space-y-8">
             {services.map((service, index) => (
-              <div
+              <a
                 key={service.id}
-                className="bg-jet-light p-8 border border-gray-800 hover:border-gold/50 transition-all duration-300 hover-lift"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                href={bookingUrl}
+                className="block"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                  <div className="mb-4 md:mb-0">
-                    <h3 className="text-2xl font-playfair font-bold text-gold mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-300">
-                      {service.duration}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-3xl font-playfair font-bold text-gold">
-                      {service.price}
-                    </span>
+                <div
+                  className="bg-jet-light p-8 border border-gray-800 hover:border-gold/50 transition-all duration-300 hover-lift cursor-pointer"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div className="mb-4 md:mb-0">
+                      <h3 className="text-2xl font-playfair font-bold text-gold mb-2">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-300">
+                        {service.duration}
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-3xl font-playfair font-bold text-gold">
+                        {service.price}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -99,7 +107,7 @@ const Services = () => {
             size="lg"
             className="bg-gold hover:bg-gold-dark text-black font-semibold px-12 py-4 text-lg hover-lift golden-glow"
           >
-            <a href="https://getsquire.com/discover/barbershop/precise-point-barber-studio-dartmouth?hl=en-CA&gei=0CI9aJzcGfqe5NoPopiVqAg&gsas=1&ahbb=1&rwg_token=ACgRB3e9WsBMuE6yvBY3ALSq5KHnJ9ICr0NDBeYAM0uCAezR_Z2F-jZh1f77md8Bh2JB5OnK1uGhYV710fbKBmz1GD7MueULBQ%3D%3D">Book Your Experience</a>
+            <a href={bookingUrl}>Book Your Experience</a>
           </Button>
         </div>
       </section>
