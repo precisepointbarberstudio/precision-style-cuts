@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-playfair font-bold text-gold mb-4">
-              Precise Point
+              PRECISE POINT
             </h3>
             <p className="text-gray-300 mb-6">
               Where modern style meets surgical precision.
