@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useState } from "react";
@@ -10,21 +9,23 @@ const Gallery = () => {
 
   const filters = [
     { id: "all", label: "All Styles" },
-    { id: "cuts", label: "Precision Cuts" },
     { id: "fades", label: "Fades" },
     { id: "beards", label: "Beard Work" }
   ];
 
-  // Placeholder images - in a real app these would be actual photos
   const galleryItems = [
-    { id: 1, category: "cuts", title: "Classic Gentleman's Cut", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" },
-    { id: 2, category: "fades", title: "Sharp Fade", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" },
-    { id: 3, category: "beards", title: "Beard Sculpting", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face" },
-    { id: 4, category: "cuts", title: "Modern Texture", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" },
-    { id: 5, category: "fades", title: "Skin Fade Perfection", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face" },
-    { id: 6, category: "beards", title: "Full Beard Trim", image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=400&h=400&fit=crop&crop=face" },
-    { id: 7, category: "cuts", title: "Executive Style", image: "https://images.unsplash.com/photo-1492447273231-0f8fecec1e3a?w=400&h=400&fit=crop&crop=face" },
-    { id: 8, category: "fades", title: "Mid Fade Excellence", image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&h=400&fit=crop&crop=face" }
+    { id: 1, category: "fades", title: "Classic Gentleman's Cut", image: "/imgs/galleryPic1.jpeg" },
+    { id: 2, category: "beards", title: "Sharp Fade", image: "/imgs/galleryPic2.jpeg" },
+    { id: 3, category: "fades", title: "Beard Sculpting", image: "/imgs/galleryPic3.jpeg" },
+    { id: 4, category: "beards", title: "Modern Texture", image: "/imgs/galleryPic4.jpeg" },
+    { id: 5, category: "beards", title: "Skin Fade Perfection", image: "/imgs/galleryPic5.jpeg" },
+    { id: 6, category: "fades", title: "Full Beard Trim", image: "/imgs/galleryPic6.jpeg" },
+    { id: 8, category: "fades", title: "Mid Fade Excellence", image: "/imgs/galleryPic8.jpeg" },
+    { id: 9, category: "fades", title: "Modern Classic", image: "/imgs/galleryPic9.jpeg" },
+    { id: 10, category: "fades", title: "Perfect Blend", image: "/imgs/galleryPic10.jpeg" },
+    { id: 11, category: "fades", title: "Beard Masterpiece", image: "/imgs/galleryPic11.jpeg" },
+    { id: 12, category: "fades", title: "Signature Style", image: "/imgs/galleryPic12.jpeg" },
+    { id: 13, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic13.jpeg" }
   ];
 
   const filteredItems = selectedFilter === "all" 

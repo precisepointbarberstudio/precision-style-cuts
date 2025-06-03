@@ -51,7 +51,7 @@ const About = () => {
                 <div className="aspect-[4/5] bg-jet-light border border-gold/30 p-8">
                   <div className="w-full h-full bg-gradient-to-br from-gold/10 to-transparent flex items-center justify-center">
                     <div className="text-center">
-                      <div className="text-6xl font-playfair font-bold text-gold mb-4">15+</div>
+                      <div className="text-6xl font-playfair font-bold text-gold mb-4">5+</div>
                       <div className="text-lg text-gray-300">Years of Excellence</div>
                     </div>
                   </div>
@@ -82,7 +82,7 @@ const About = () => {
             <div className="group animate-fade-in hover-lift max-w-md">
               <div className="relative overflow-hidden mb-6">
                 <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face"
+                  src="./public/imgs/nate.png"
                   alt="Nate J."
                   className="w-full aspect-[4/5] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
                 />

@@ -1,73 +1,128 @@
-# Welcome to your Lovable project
+# Precision Style Cuts
 
-## Project info
+A modern web application for a professional hair salon, built with React and TypeScript.
 
-**URL**: https://lovable.dev/projects/c8e9206b-de04-454c-8d29-ceadb71257b1
+## 📋 Table of Contents
+- [Quick Start](#quick-start)
+- [Project Setup](#project-setup)
+- [Development](#development)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Deployment](#deployment)
+- [Custom Domain Setup](#custom-domain-setup)
 
-## How can I edit this code?
+## 🚀 Quick Start
 
-There are several ways of editing your application.
+### Prerequisites
+- Node.js (v16 or higher)
+- npm (v8 or higher)
+- Git
 
-**Use Lovable**
+### Installation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c8e9206b-de04-454c-8d29-ceadb71257b1) and start prompting.
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/precision-style-cuts.git
 
-Changes made via Lovable will be committed automatically to this repo.
+# Navigate to project directory
+cd precision-style-cuts
 
-**Use your preferred IDE**
+# Install dependencies
+npm install
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 🛠 Project Setup
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Development Environment
 
-**Use GitHub Codespaces**
+The project can be edited through multiple approaches:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. **Local Development**
+   ```bash
+   # Required directory structure:
+   /precision-style-cuts
+   ├── src/
+   ├── public/
+   ├── package.json
+   └── vite.config.ts
+   ```
 
-## What technologies are used for this project?
+2. **GitHub Codespaces**
+   - Navigate to repository
+   - Click "Code" > "Codespaces"
+   - Select "New codespace"
 
-This project is built with:
+### Available Scripts
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+# Start development server
+npm run dev
 
-## How can I deploy this project?
+# Build for production
+npm run build
 
-Simply open [Lovable](https://lovable.dev/projects/c8e9206b-de04-454c-8d29-ceadb71257b1) and click on Share -> Publish.
+# Preview production build
+npm run preview
 
-## Can I connect a custom domain to my Lovable project?
+# Run tests
+npm run test
+```
 
-Yes, you can!
+## 🔧 Technology Stack
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Frontend Framework**: React 18
+- **Language**: TypeScript 5
+- **Build Tool**: Vite
+- **UI Components**: shadcn-ui
+- **Styling**: Tailwind CSS
+- **Version Control**: Git
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📁 Project Structure
+
+```
+precision-style-cuts/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   └── App.tsx
+├── public/
+├── tests/
+├── package.json
+└── vite.config.ts
+```
+
+## 🌐 Deployment
+
+### Production Deployment
+
+Manual Deployment:
+   ```bash
+   npm run build
+   ```
+
+## 🔗 Custom Domain Setup
+
+To connect your custom domain:
+
+1. Navigate to Project Settings > Domains
+2. Click "Connect Domain"
+3. Follow DNS configuration instructions
+4. Verify domain ownership
+
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License.
+

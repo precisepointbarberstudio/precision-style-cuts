@@ -24,10 +24,10 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-38">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src="/lovable-uploads/4df19e55-f560-4ac7-a5f3-833e2da81afd.png" alt="Precise Point Barber Studio" className="h-40 w-auto object-contain" />
+            <img src="/imgs/4df19e55-f560-4ac7-a5f3-833e2da81afd.png" alt="Precise Point Barber Studio" className="h-36 w-auto object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
