@@ -82,7 +82,7 @@ const About = () => {
             <div className="group animate-fade-in hover-lift max-w-md">
               <div className="relative overflow-hidden mb-6">
                 <img
-                  src="./public/imgs/nate.png"
+                  src="/imgs/nate.png"
                   alt="Nate J."
                   className="w-full aspect-[4/5] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
