@@ -17,7 +17,7 @@ const Gallery = () => {
     { id: 1, category: "beards", title: "Beard Sculpting", image: "/imgs/galleryPic1.jpg" },
     { id: 2, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic2.jpg" },
     { id: 3, category: "beards", title: "Beard Sculpting", image: "/imgs/galleryPic3.jpg" },
-    { id: 4, category: "beards", title: "Modern Texture", image: "/imgs/galleryPic4.jpg" },
+    { id: 4, category: "beards", title: "Beard Sculpting", image: "/imgs/galleryPic4.jpg" },
     { id: 5, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic5.jpg" },
     { id: 6, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic6.jpg" },
     { id: 7, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic8.jpg" },
