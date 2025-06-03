@@ -62,17 +62,17 @@ const Index = () => {
               { 
                 title: "Precision Cuts", 
                 description: "Architectural styling with razor-sharp precision that defines your unique character",
-                image: "./public/imgs/galleryPic11.jpeg"
+                image: "/imgs/galleryPic11.jpeg"
               },
               { 
                 title: "Master Fades", 
                 description: "Seamless transitions crafted with surgical precision for the modern gentleman",
-                image: "./public/imgs/galleryPic6.jpeg"
+                image: "/imgs/galleryPic6.jpeg"
               },
               { 
                 title: "Beard Sculpting", 
                 description: "Transform your facial hair into a work of art with our master-level expertise",
-                image: "./public/imgs/galleryPic5.jpeg"
+                image: "/imgs/galleryPic5.jpeg"
               }
             ].map((service, index) => (
               <div 
