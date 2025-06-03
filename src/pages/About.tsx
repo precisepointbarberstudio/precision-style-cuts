@@ -2,33 +2,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const About = () => {
-  const barbers = [
-    {
-      name: "Marcus Steel",
-      specialty: "Precision Cuts",
-      experience: "12 Years",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
-      bio: "Master of architectural cutting with an eye for modern styling"
-    },
-    {
-      name: "Diego Rivera",
-      specialty: "Fade Specialist",
-      experience: "8 Years",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
-      bio: "Renowned for seamless transitions and flawless execution"
-    },
-    {
-      name: "James Crown",
-      specialty: "Beard Sculpting",
-      experience: "15 Years",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop&crop=face",
-      bio: "Traditional techniques meets contemporary beard artistry"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
@@ -91,48 +66,42 @@ const About = () => {
       {/* Divider */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-gold to-transparent my-20"></div>
 
-      {/* Team Section */}
+      {/* Barber Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gold mb-8">
-              Meet Our Masters
+              Meet Our Master
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Each artist brings years of experience and a passion for perfection to every service
+              Years of experience and a passion for perfection in every service
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {barbers.map((barber, index) => (
-              <div
-                key={barber.name}
-                className="group animate-fade-in hover-lift"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="relative overflow-hidden mb-6">
-                  <img
-                    src={barber.image}
-                    alt={barber.name}
-                    className="w-full aspect-[4/5] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <p className="text-white text-sm leading-relaxed">
-                      {barber.bio}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="text-center">
-                  <h3 className="text-2xl font-playfair font-bold text-gold mb-2">
-                    {barber.name}
-                  </h3>
-                  <p className="text-gray-300 mb-1">{barber.specialty}</p>
-                  <p className="text-sm text-gray-400">{barber.experience} Experience</p>
+          <div className="flex justify-center">
+            <div className="group animate-fade-in hover-lift max-w-md">
+              <div className="relative overflow-hidden mb-6">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face"
+                  alt="Nate J."
+                  className="w-full aspect-[4/5] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-white text-sm leading-relaxed">
+                    Master barber with precision cutting techniques and artistic vision
+                  </p>
                 </div>
               </div>
-            ))}
+
+              <div className="text-center">
+                <h3 className="text-2xl font-playfair font-bold text-gold mb-2">
+                  Nate J.
+                </h3>
+                <p className="text-gray-300 mb-1">Master Barber</p>
+                <p className="text-sm text-gray-400">Expert in All Services</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -196,8 +165,8 @@ const About = () => {
             size="lg"
             className="bg-gold hover:bg-gold-dark text-black font-semibold px-12 py-4 text-lg hover-lift golden-glow"
           >
-            <Link to="/booking">Book Your Experience</Link>
-          </Button>
+            <a href="https://getsquire.com/discover/barbershop/precise-point-barber-studio-dartmouth?hl=en-CA&gei=0CI9aJzcGfqe5NoPopiVqAg&gsas=1&ahbb=1&rwg_token=ACgRB3e9WsBMuE6yvBY3ALSq5KHnJ9ICr0NDBeYAM0uCAezR_Z2F-jZh1f77md8Bh2JB5OnK1uGhYV710fbKBmz1GD7MueULBQ%3D%3D">Book Your Experience</a>
+            </Button>
         </div>
       </section>
 

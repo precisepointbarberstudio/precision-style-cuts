@@ -2,6 +2,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Gallery = () => {
   const [selectedFilter, setSelectedFilter] = useState("all");
@@ -115,12 +117,19 @@ const Gallery = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gold hover:bg-gold-dark text-black font-semibold px-8 py-3 hover-lift golden-glow transition-all duration-300">
-              Book Your Session
-            </button>
-            <button className="border border-gold text-gold hover:bg-gold hover:text-black font-semibold px-8 py-3 transition-all duration-300">
-              View Services
-            </button>
+            <Button 
+              asChild
+              className="bg-gold hover:bg-gold-dark text-black font-semibold px-8 py-3 hover-lift golden-glow transition-all duration-300"
+            >
+              <a href="https://getsquire.com/discover/barbershop/precise-point-barber-studio-dartmouth?hl=en-CA&gei=0CI9aJzcGfqe5NoPopiVqAg&gsas=1&ahbb=1&rwg_token=ACgRB3e9WsBMuE6yvBY3ALSq5KHnJ9ICr0NDBeYAM0uCAezR_Z2F-jZh1f77md8Bh2JB5OnK1uGhYV710fbKBmz1GD7MueULBQ%3D%3D">Book Your Session</a>
+            </Button>
+            <Button 
+              asChild
+              variant="outline"
+              className="border border-gold text-gold hover:bg-gold hover:text-black font-semibold px-8 py-3 transition-all duration-300"
+            >
+              <Link to="/services">View Services</Link>
+            </Button>
           </div>
         </div>
       </section>

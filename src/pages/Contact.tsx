@@ -2,47 +2,10 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { Facebook, TikTok } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Please fill in all fields",
-        description: "All fields are required to send your message.",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you within 24 hours.",
-    });
-
-    setFormData({ name: "", email: "", message: "" });
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
@@ -61,7 +24,7 @@ const Contact = () => {
 
       {/* Contact Content */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-4xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
             {/* Contact Information */}
@@ -78,8 +41,8 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Location</h3>
                     <p className="text-gray-300">
-                      123 Style Street<br />
-                      Downtown, NY 10001
+                      303-177 Main St<br />
+                      Dartmouth, NS, B2X 1S1
                     </p>
                   </div>
                 </div>
@@ -90,7 +53,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-                    <p className="text-gray-300">(555) 123-4567</p>
+                    <p className="text-gray-300">(902) 830-1373</p>
                   </div>
                 </div>
 
@@ -100,7 +63,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                    <p className="text-gray-300">info@precisepoint.com</p>
+                    <p className="text-gray-300">precisepointbarbering@gmail.com</p>
                   </div>
                 </div>
 
@@ -111,81 +74,65 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Hours</h3>
                     <div className="text-gray-300 space-y-1">
-                      <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
-                      <p>Saturday: 8:00 AM - 6:00 PM</p>
-                      <p>Sunday: 10:00 AM - 4:00 PM</p>
+                      <div className="flex justify-between">
+                        <span>Monday</span>
+                        <span>Closed</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Tuesday</span>
+                        <span>Closed</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Wednesday</span>
+                        <span>10:00 AM - 8:30 PM</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Thursday</span>
+                        <span>10:00 AM - 8:30 PM</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Friday</span>
+                        <span>10:00 AM - 8:30 PM</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Saturday</span>
+                        <span>10:00 AM - 8:30 PM</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Sunday</span>
+                        <span>10:00 AM - 8:00 PM</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Map Placeholder */}
-              <div className="mt-12">
-                <div className="aspect-video bg-jet-light border border-gold/30 rounded-lg overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-gold/10 to-black flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin size={48} className="text-gold mx-auto mb-4" />
-                      <p className="text-gray-300">Interactive Map</p>
-                      <p className="text-sm text-gray-400">123 Style Street, Downtown NY</p>
+                {/* Social Media */}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 bg-black rounded-full"></div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Follow Us</h3>
+                    <div className="space-y-2 text-gray-300">
+                      <p>Instagram: @precisepointbarbering</p>
+                      <p>Facebook: Precise Point Barber Studio</p>
+                      <p>TikTok: @precisepointbarberstudio</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Map Placeholder */}
             <div className="animate-fade-in">
-              <div className="bg-jet-light p-8 md:p-12 border border-gray-800">
-                <h2 className="text-3xl font-playfair font-bold text-gold mb-8">
-                  Send us a Message
-                </h2>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name" className="text-gold">Name</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="bg-black border-gray-700 focus:border-gold text-white placeholder:text-gold/50"
-                      placeholder="Your full name"
-                    />
+              <div className="aspect-video bg-jet-light border border-gold/30 rounded-lg overflow-hidden">
+                <div className="w-full h-full bg-gradient-to-br from-gold/10 to-black flex items-center justify-center">
+                  <div className="text-center">
+                    <MapPin size={48} className="text-gold mx-auto mb-4" />
+                    <p className="text-gray-300">Visit Us</p>
+                    <p className="text-sm text-gray-400">303-177 Main St, Dartmouth NS</p>
                   </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-gold">Email</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="bg-black border-gray-700 focus:border-gold text-white placeholder:text-gold/50"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message" className="text-gold">Message</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={6}
-                      className="bg-black border-gray-700 focus:border-gold text-white placeholder:text-gold/50 resize-none"
-                      placeholder="Tell us how we can help you..."
-                    />
-                  </div>
-
-                  <Button 
-                    type="submit"
-                    className="w-full bg-gold hover:bg-gold-dark text-black font-semibold py-3 hover-lift"
-                  >
-                    Send Message
-                  </Button>
-                </form>
+                </div>
               </div>
             </div>
           </div>
@@ -207,7 +154,7 @@ const Contact = () => {
             size="lg"
             className="bg-gold hover:bg-gold-dark text-black font-semibold px-12 py-4 text-lg hover-lift golden-glow"
           >
-            <a href="/booking">Book Your Session</a>
+            <a href="https://getsquire.com/discover/barbershop/precise-point-barber-studio-dartmouth?hl=en-CA&gei=0CI9aJzcGfqe5NoPopiVqAg&gsas=1&ahbb=1&rwg_token=ACgRB3e9WsBMuE6yvBY3ALSq5KHnJ9ICr0NDBeYAM0uCAezR_Z2F-jZh1f77md8Bh2JB5OnK1uGhYV710fbKBmz1GD7MueULBQ%3D%3D">Book Your Session</a>
           </Button>
         </div>
       </section>
