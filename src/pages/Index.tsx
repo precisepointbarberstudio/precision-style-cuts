@@ -19,8 +19,8 @@ const Index = () => {
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold mb-6 animate-fade-in">
             {" "}
-            <span className="text-white mx-0 px-0 text-7xl">PRECISE CUT,</span>{" "}
-            <span className="text-gradient font-extrabold text-7xl">MODERN STYLE</span>
+            <span className="text-white mx-0 px-0 text-4xl">PRECISE CUT,</span>{" "}
+            <span className="text-gradient font-extrabold text-4xl">MODERN STYLE</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto animate-fade-in">Where modern style meets precision</p>
@@ -72,7 +72,7 @@ const Index = () => {
               { 
                 title: "Beard Sculpting", 
                 description: "Transform your facial hair into a work of art with our master-level expertise",
-                image: "/imgs/galleryPic5.jpg"
+                image: "/imgs/galleryPic3.jpg"
               }
             ].map((service, index) => (
               <div 
