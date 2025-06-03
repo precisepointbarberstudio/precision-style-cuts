@@ -24,10 +24,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-playfair font-bold">
-              <span className="text-gold">Precise Point</span>
-              <span className="text-white"> Barber Studio</span>
-            </span>
+            <img 
+              src="/lovable-uploads/90186684-002c-46fa-b421-f218cd9c8ebb.png" 
+              alt="Precise Point Barber Studio" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
