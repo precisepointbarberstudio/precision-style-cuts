@@ -14,7 +14,7 @@ const Gallery = () => {
   ];
 
   const galleryItems = [
-    { id: 1, category: "fades", title: "Classic Gentleman's Cut", image: "/imgs/galleryPic1.jpeg" },
+    { id: 1, category: "fades", title: "Classic Gentleman's Cut", image: "./public/imgs/galleryPic1.jpeg" },
     { id: 2, category: "beards", title: "Sharp Fade", image: "/imgs/galleryPic2.jpeg" },
     { id: 3, category: "fades", title: "Beard Sculpting", image: "/imgs/galleryPic3.jpeg" },
     { id: 4, category: "beards", title: "Modern Texture", image: "/imgs/galleryPic4.jpeg" },
