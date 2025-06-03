@@ -14,17 +14,17 @@ const Gallery = () => {
   ];
 
   const galleryItems = [
-    { id: 1, category: "fades", title: "Classic Gentleman's Cut", image: "/imgs/galleryPic1.jpg" },
-    { id: 2, category: "beards", title: "Sharp Fade", image: "/imgs/galleryPic2.jpg" },
-    { id: 3, category: "fades", title: "Beard Sculpting", image: "/imgs/galleryPic3.jpg" },
+    { id: 1, category: "beards", title: "Beard Sculpting", image: "/imgs/galleryPic1.jpg" },
+    { id: 2, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic2.jpg" },
+    { id: 3, category: "beards", title: "Beard Sculpting", image: "/imgs/galleryPic3.jpg" },
     { id: 4, category: "beards", title: "Modern Texture", image: "/imgs/galleryPic4.jpg" },
-    { id: 5, category: "beards", title: "Skin Fade Perfection", image: "/imgs/galleryPic5.jpg" },
-    { id: 6, category: "fades", title: "Full Beard Trim", image: "/imgs/galleryPic6.jpg" },
-    { id: 7, category: "fades", title: "Mid Fade Excellence", image: "/imgs/galleryPic8.jpg" },
-    { id: 8, category: "fades", title: "Modern Classic", image: "/imgs/galleryPic9.jpg" },
-    { id: 9, category: "fades", title: "Perfect Blend", image: "/imgs/galleryPic10.jpg" },
-    { id: 10, category: "fades", title: "Beard Masterpiece", image: "/imgs/galleryPic11.jpg" },
-    { id: 11, category: "fades", title: "Signature Style", image: "/imgs/galleryPic12.jpg" },
+    { id: 5, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic5.jpg" },
+    { id: 6, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic6.jpg" },
+    { id: 7, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic8.jpg" },
+    { id: 8, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic9.jpg" },
+    { id: 9, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic10.jpg" },
+    { id: 10, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic11.jpg" },
+    { id: 11, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic12.jpg" },
     { id: 12, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic13.jpg" }
   ];
 
