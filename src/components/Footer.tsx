@@ -112,7 +112,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center pt-8 border-t border-gray-800">
           <p className="text-gray-400">
-            © 2024 Precise Point Barber Studio. All rights reserved.
+            © 2025 Precise Point Barber Studio. All rights reserved.
           </p>
         </div>
       </div>
