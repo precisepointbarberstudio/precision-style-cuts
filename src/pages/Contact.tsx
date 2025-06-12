@@ -41,7 +41,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Location</h3>
                     <p className="text-gray-300">
-                      303-177 Main St<br />
+                      177 Main St Suite 303 <br />
                       Dartmouth, NS, B2X 1S1
                     </p>
                   </div>
@@ -150,7 +150,7 @@ const Contact = () => {
                   <div className="text-center">
                     <MapPin size={48} className="text-gold mx-auto mb-4" />
                     <p className="text-gray-300">Visit Us</p>
-                    <p className="text-sm text-gray-400">303-177 Main St, Dartmouth NS</p>
+                    <p className="text-sm text-gray-400"> 177 Main St Suite 303, Dartmouth NS</p>
                   </div>
                 </div>
               </div>
