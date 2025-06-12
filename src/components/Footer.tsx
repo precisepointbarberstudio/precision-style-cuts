@@ -89,7 +89,7 @@ const Footer = () => {
           <div className="text-center md:text-right">
             <h4 className="text-lg font-semibold text-gold mb-4">Contact</h4>
             <div className="space-y-2 text-gray-300">
-              <p>303-177 Main St</p>
+              <p>177 Main St Suite 303</p>
               <p>Dartmouth, NS, B2X 1S1</p>
               <p>(902) 830-1373</p>
               <p>precisepointbarbering@gmail.com</p>
