@@ -150,7 +150,7 @@ const Contact = () => {
                   <div className="text-center">
                     <MapPin size={48} className="text-gold mx-auto mb-4" />
                     <p className="text-gray-300">Visit Us</p>
-                    <p className="text-sm text-gray-400"> 177 Main St Suite 303, Dartmouth NS</p>
+                    <p className="text-sm text-gray-400"> 177 Main St, Suite 303, Dartmouth NS</p>
                   </div>
                 </div>
               </div>
