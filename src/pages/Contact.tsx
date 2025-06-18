@@ -41,7 +41,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Location</h3>
                     <p className="text-gray-300">
-                      177 Main St Suite 303 <br />
+                      177 Main St, Suite 303 <br />
                       Dartmouth, NS, B2X 1S1
                     </p>
                   </div>
