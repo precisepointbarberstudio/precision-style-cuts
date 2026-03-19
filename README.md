@@ -1,4 +1,4 @@
-# Precision Style Cuts
+# Surgical Precision Style Cuts
 
 A modern web application for a professional hair salon, built with React and TypeScript.
 
