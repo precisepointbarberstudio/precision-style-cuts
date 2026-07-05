@@ -1,0 +1,40 @@
+# Decap CMS configuration
+backend:
+  name: github
+  repo: precisepointbarberstudio/precision-style-cuts
+  branch: main
+  base_url: https://www.precisepoint.ca
+  auth_endpoint: api/auth
+
+# New photos uploaded through the CMS are saved here.
+media_folder: "public/imgs"
+public_folder: "/imgs"
+
+# Show a live preview link after publishing.
+publish_mode: simple
+
+collections:
+  - name: gallery
+    label: "Gallery"
+    description: "Add, remove, and reorder the photos shown on the Gallery page."
+    files:
+      - name: photos
+        label: "Gallery Photos"
+        file: "src/data/gallery.json"
+        format: json
+        fields:
+          - label: "Photos"
+            name: "items"
+            label_singular: "Photo"
+            widget: list
+            summary: "{{fields.title}} ({{fields.category}})"
+            fields:
+              - { label: "Image", name: "image", widget: image }
+              - { label: "Title", name: "title", widget: string, default: "Precision Cut" }
+              - label: "Category"
+                name: "category"
+                widget: select
+                default: "fades"
+                options:
+                  - { label: "Fades", value: "fades" }
+                  - { label: "Beard Work", value: "beards" }

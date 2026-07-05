@@ -1,0 +1,16 @@
+{
+  "items": [
+    { "image": "/imgs/galleryPic1.jpg", "title": "Beard Sculpting", "category": "beards" },
+    { "image": "/imgs/galleryPic2.jpg", "title": "Premium Fade", "category": "fades" },
+    { "image": "/imgs/galleryPic3.jpg", "title": "Beard Sculpting", "category": "beards" },
+    { "image": "/imgs/galleryPic4.jpg", "title": "Beard Sculpting", "category": "beards" },
+    { "image": "/imgs/galleryPic5.jpg", "title": "Premium Fade", "category": "fades" },
+    { "image": "/imgs/galleryPic6.jpg", "title": "Premium Fade", "category": "fades" },
+    { "image": "/imgs/galleryPic8.jpg", "title": "Premium Fade", "category": "fades" },
+    { "image": "/imgs/galleryPic9.jpg", "title": "Premium Fade", "category": "fades" },
+    { "image": "/imgs/galleryPic10.jpg", "title": "Premium Fade", "category": "fades" },
+    { "image": "/imgs/galleryPic11.jpg", "title": "Premium Fade", "category": "fades" },
+    { "image": "/imgs/galleryPic12.jpg", "title": "Premium Fade", "category": "fades" },
+    { "image": "/imgs/galleryPic13.jpg", "title": "Premium Fade", "category": "fades" }
+  ]
+}

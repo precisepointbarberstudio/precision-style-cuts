@@ -19,7 +19,7 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex justify-center md:justify-start space-x-4">
               <a 
-                href="https://www.instagram.com/precisepointbarbering?igsh=MXdnY3duNTlvN3Z1NQ==" 
+                href="https://www.instagram.com/precisepointbarberstudio/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-gold transition-colors duration-200"
@@ -105,7 +105,7 @@ const Footer = () => {
             size="lg"
             className="bg-gold hover:bg-gold-dark text-black font-semibold px-8 py-3 text-lg hover-lift"
           >
-            <a href="https://getsquire.com/discover/barbershop/precise-point-barber-studio-dartmouth?hl=en-CA&gei=0CI9aJzcGfqe5NoPopiVqAg&gsas=1&ahbb=1&rwg_token=ACgRB3e9WsBMuE6yvBY3ALSq5KHnJ9ICr0NDBeYAM0uCAezR_Z2F-jZh1f77md8Bh2JB5OnK1uGhYV710fbKBmz1GD7MueULBQ%3D%3D">Book Your Cut</a>
+            <a href="https://getsquire.com/discover/barbershop/precise-point-barber-studio-dartmouth?hl=en-CA&gei=0CI9aJzcGfqe5NoPopiVqAg&gsas=1&ahbb=1&rwg_token=ACgRB3e9WsBMuE6yvBY3ALSq5KHnJ9ICr0NDBeYAM0uCAezR_Z2F-jZh1f77md8Bh2JB5OnK1uGhYV710fbKBmz1GD7MueULBQ%3D%3D">Book Your Experience</a>
           </Button>
         </div>
 

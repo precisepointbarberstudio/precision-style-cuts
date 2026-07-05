@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import galleryData from "@/data/gallery.json";
 
 const Gallery = () => {
   const [selectedFilter, setSelectedFilter] = useState("all");
@@ -13,20 +14,11 @@ const Gallery = () => {
     { id: "beards", label: "Beard Work" }
   ];
 
-  const galleryItems = [
-    { id: 1, category: "beards", title: "Beard Sculpting", image: "/imgs/galleryPic1.jpg" },
-    { id: 2, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic2.jpg" },
-    { id: 3, category: "beards", title: "Beard Sculpting", image: "/imgs/galleryPic3.jpg" },
-    { id: 4, category: "beards", title: "Beard Sculpting", image: "/imgs/galleryPic4.jpg" },
-    { id: 5, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic5.jpg" },
-    { id: 6, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic6.jpg" },
-    { id: 7, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic8.jpg" },
-    { id: 8, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic9.jpg" },
-    { id: 9, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic10.jpg" },
-    { id: 10, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic11.jpg" },
-    { id: 11, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic12.jpg" },
-    { id: 12, category: "fades", title: "Premium Fade", image: "/imgs/galleryPic13.jpg" }
-  ];
+  // Photos are managed through the CMS at /admin (src/data/gallery.json).
+  const galleryItems = galleryData.items.map((item, index) => ({
+    id: index + 1,
+    ...item
+  }));
 
   const filteredItems = selectedFilter === "all" 
     ? galleryItems 

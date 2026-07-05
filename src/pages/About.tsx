@@ -48,13 +48,12 @@ const About = () => {
             
             <div className="animate-fade-in">
               <div className="relative">
-                <div className="aspect-[4/5] bg-jet-light border border-gold/30 p-8">
-                  <div className="w-full h-full bg-gradient-to-br from-gold/10 to-transparent flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-6xl font-playfair font-bold text-gold mb-4">5+</div>
-                      <div className="text-lg text-gray-300">Years of Excellence</div>
-                    </div>
-                  </div>
+                <div className="aspect-[4/5] bg-jet-light border border-gold/30 overflow-hidden">
+                  <img
+                    src="/imgs/about.jpg"
+                    alt="Precise Point Barber Studio"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-gold/50"></div>
               </div>

@@ -7,32 +7,38 @@ const Services = () => {
     {
       id: "haircut",
       title: "HAIRCUT",
-      duration: "35min",
-      price: "$40"
+      duration: "45min",
+      price: "$50"
     },
     {
       id: "beard-trim-addon",
       title: "Beard Trim Added to Your Haircut",
-      duration: "25min",
-      price: "$15"
+      duration: "25 – 30 mins",
+      price: "$10 – $15"
     },
     {
       id: "haircut-youth",
       title: "Haircut Ages 16 & Under",
-      duration: "35min",
-      price: "$35"
+      duration: "45min",
+      price: "$40"
     },
     {
       id: "buzzcut",
       title: "BUZZCUT",
       duration: "35min",
-      price: "$30"
+      price: "$35"
     },
     {
       id: "beard-trim-only",
       title: "Beard Trim Only",
       duration: "25min",
       price: "$35"
+    },
+    {
+      id: "apprentice-haircut",
+      title: "Apprentice HAIRCUT",
+      duration: "1h",
+      price: "$30"
     }
   ];
 

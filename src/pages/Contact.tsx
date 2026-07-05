@@ -123,8 +123,8 @@ const Contact = () => {
                     <h3 className="text-xl font-semibold text-white mb-2">Follow Us</h3>
                     <div className="space-y-2 text-gray-300">
                       <p>
-                        <a href="https://www.instagram.com/precisepointbarbering?igsh=MXdnY3duNTlvN3Z1NQ==" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
-                          Instagram: @precisepointbarbering
+                        <a href="https://www.instagram.com/precisepointbarberstudio/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                          Instagram: @precisepointbarberstudio
                         </a>
                       </p>
                       <p>
