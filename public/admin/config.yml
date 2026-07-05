@@ -14,6 +14,26 @@ public_folder: "/imgs"
 publish_mode: simple
 
 collections:
+  - name: home
+    label: "Home Page"
+    description: "Edit the three featured 'Signature Services' cards on the landing page."
+    files:
+      - name: signature_services
+        label: "Signature Services (3 cards)"
+        file: "src/data/homeServices.json"
+        format: json
+        fields:
+          - label: "Cards"
+            name: "items"
+            label_singular: "Card"
+            widget: list
+            max: 3
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Image", name: "image", widget: image }
+              - { label: "Title", name: "title", widget: string }
+              - { label: "Description", name: "description", widget: text }
+
   - name: gallery
     label: "Gallery"
     description: "Add, remove, and reorder the photos shown on the Gallery page."

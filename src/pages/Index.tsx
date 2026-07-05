@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import homeServices from "@/data/homeServices.json";
 
 const Index = () => {
   return (
@@ -10,10 +11,10 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image/Video Placeholder */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23D4AF37%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M0%200h30v30H0zM30%2030h30v30H30z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        </div>
+        {/* Barber-themed backdrop: matte black + faint gold pinstripes */}
+        <div className="absolute inset-0 hero-bg"></div>
+        {/* Gold spotlight glow behind the headline */}
+        <div className="absolute left-1/2 top-[42%] h-[65vh] w-[85vw] max-w-3xl -translate-x-1/2 -translate-y-1/2 hero-glow pointer-events-none"></div>
         
         {/* Hero Content */}
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
@@ -23,7 +24,7 @@ const Index = () => {
             <span className="text-gradient font-extrabold text-5xl">MODERN STYLE</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto animate-fade-in">Where modern style meets precision</p>
+          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto animate-fade-in">Where modern style meets surgical precision</p>
           
           <Button asChild size="lg" className="bg-gold hover:bg-gold-dark text-black font-semibold px-12 py-4 text-lg hover-lift animate-fade-in golden-glow">
             <a href="https://getsquire.com/discover/barbershop/precise-point-barber-studio-dartmouth?hl=en-CA&gei=0CI9aJzcGfqe5NoPopiVqAg&gsas=1&ahbb=1&rwg_token=ACgRB3e9WsBMuE6yvBY3ALSq5KHnJ9ICr0NDBeYAM0uCAezR_Z2F-jZh1f77md8Bh2JB5OnK1uGhYV710fbKBmz1GD7MueULBQ%3D%3D" target="_blank" rel="noopener noreferrer">Book Your Experience</a>
@@ -58,23 +59,7 @@ const Index = () => {
           </h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {[
-              { 
-                title: "Precision Cuts", 
-                description: "Architectural styling with razor-sharp precision that defines your unique character",
-                image: "/imgs/galleryPic11.jpg"
-              },
-              { 
-                title: "Master Fades", 
-                description: "Seamless transitions crafted with surgical precision for the modern gentleman",
-                image: "/imgs/galleryPic6.jpg"
-              },
-              { 
-                title: "Beard Sculpting", 
-                description: "Transform your facial hair into a work of art with our master-level expertise",
-                image: "/imgs/galleryPic4.jpg"
-              }
-            ].map((service, index) => (
+            {homeServices.items.map((service, index) => (
               <div 
                 key={service.title}
                 className="group relative overflow-hidden bg-black border border-gray-800 hover:border-gold/50 transition-all duration-500 hover-lift"

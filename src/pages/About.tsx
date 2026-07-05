@@ -1,9 +1,22 @@
 
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
+const aboutImages = [
+  { src: "/imgs/about.jpg", alt: "Precise Point Barber Studio" },
+  { src: "/imgs/nate.jpg", alt: "Nate J." },
+];
+
 const About = () => {
+  // Roll the dice once when the About page opens (or is refreshed) to randomly
+  // decide which image sits in the top (colored) slot vs the bottom (B&W) slot.
+  const [topIndex] = useState(() => (Math.random() < 0.5 ? 0 : 1));
+
+  const topImage = aboutImages[topIndex];
+  const bottomImage = aboutImages[1 - topIndex];
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
@@ -50,12 +63,18 @@ const About = () => {
               <div className="relative">
                 <div className="aspect-[4/5] bg-jet-light border border-gold/30 overflow-hidden">
                   <img
-                    src="/imgs/about.jpg"
-                    alt="Precise Point Barber Studio"
-                    className="w-full h-full object-cover"
+                    src={topImage.src}
+                    alt={topImage.alt}
+                    className="w-full h-full object-cover transition-all duration-500"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-gold/50"></div>
+                {/* Experience badge */}
+                <div className="absolute -bottom-4 -right-4 w-28 h-28 bg-black border border-gold/50 flex flex-col items-center justify-center text-center px-2">
+                  <span className="text-4xl font-playfair font-bold text-gold leading-none">5+</span>
+                  <span className="mt-1 text-[10px] uppercase tracking-widest text-gray-300 leading-tight">
+                    Years<br />Experience
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -81,12 +100,12 @@ const About = () => {
             <div className="group animate-fade-in hover-lift max-w-md">
               <div className="relative overflow-hidden mb-6">
                 <img
-                  src="/imgs/nate.png"
-                  alt="Nate J."
-                  className="w-full aspect-[4/5] object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                  src={bottomImage.src}
+                  alt={bottomImage.alt}
+                  className="w-full aspect-[4/5] object-cover filter grayscale transition-all duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 pointer-events-none">
                   <p className="text-white text-sm leading-relaxed">
                     Master barber with precision cutting techniques and artistic vision
                   </p>

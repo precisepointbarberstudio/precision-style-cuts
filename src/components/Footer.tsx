@@ -114,6 +114,17 @@ const Footer = () => {
           <p className="text-gray-400">
             © 2025 Precise Point Barber Studio. All rights reserved.
           </p>
+          <p className="mt-2 text-xs text-gray-600">
+            Powered by{" "}
+            <a
+              href="https://www.ibrahimaltawil.com"
+              target="_blank"
+              rel="noopener"
+              className="hover:text-gold transition-colors duration-200"
+            >
+              TawilOS
+            </a>
+          </p>
         </div>
       </div>
     </footer>

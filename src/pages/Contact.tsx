@@ -143,16 +143,17 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Map Placeholder */}
+            {/* Map */}
             <div className="animate-fade-in">
               <div className="aspect-video bg-jet-light border border-gold/30 rounded-lg overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-gold/10 to-black flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin size={48} className="text-gold mx-auto mb-4" />
-                    <p className="text-gray-300">Visit Us</p>
-                    <p className="text-sm text-gray-400"> 177 Main Street, Suite 303, Dartmouth NS</p>
-                  </div>
-                </div>
+                <iframe
+                  title="Precise Point Barber Studio location"
+                  src="https://www.google.com/maps?q=177%20Main%20Street%2C%20Suite%20303%2C%20Dartmouth%2C%20NS%20B2X%201S1&output=embed"
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
           </div>

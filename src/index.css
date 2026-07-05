@@ -71,4 +71,41 @@
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
   }
+
+  /* Barber-themed hero backdrop: matte black, faint gold pinstripes, vignetted edges */
+  .hero-bg {
+    background-color: #000000;
+    background-image:
+      radial-gradient(120% 120% at 50% 50%, transparent 42%, rgba(0, 0, 0, 0.92) 100%),
+      repeating-linear-gradient(
+        45deg,
+        rgba(212, 175, 55, 0.05) 0,
+        rgba(212, 175, 55, 0.05) 1.5px,
+        transparent 1.5px,
+        transparent 22px
+      );
+  }
+
+  /* Soft gold spotlight that gently breathes behind the headline */
+  .hero-glow {
+    background: radial-gradient(closest-side, rgba(212, 175, 55, 0.2), transparent);
+    animation: hero-glow 7s ease-in-out infinite alternate;
+  }
+
+  @keyframes hero-glow {
+    from {
+      opacity: 0.55;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-glow {
+      animation: none;
+    }
+  }
 }

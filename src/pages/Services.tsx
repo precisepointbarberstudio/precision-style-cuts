@@ -73,7 +73,7 @@ const Services = () => {
                 rel="noopener noreferrer"
               >
                 <div
-                  className="bg-jet-light p-8 border border-gray-800 hover:border-gold/50 transition-all duration-300 hover-lift cursor-pointer"
+                  className="rounded-2xl bg-jet-light p-8 border border-white/10 hover:border-white/20 hover:bg-[#1a1a1a] transition-colors duration-300 cursor-pointer"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -81,7 +81,7 @@ const Services = () => {
                       <h3 className="text-2xl font-playfair font-bold text-gold mb-2">
                         {service.title}
                       </h3>
-                      <p className="text-gray-300">
+                      <p className="text-sm uppercase tracking-widest text-gray-400">
                         {service.duration}
                       </p>
                     </div>
